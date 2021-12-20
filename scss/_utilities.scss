@@ -1,0 +1,94 @@
+// Containers
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+  // border: 1px solid #000;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.split {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & > * {
+    flex-basis: 45%;
+    min-width: 15em;
+  }
+
+  @media screen and (max-width: 768px) {
+    & > * {
+      flex-basis: 100%;
+      min-width: 15em;
+    }
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 12px 0 0;
+  backface-visibility: hidden;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease-in, opacity 0.2s linear;
+  border: 1px solid;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(0.97);
+    opacity: 0.8;
+  }
+}
+
+.btn-primary {
+  background-color: #2980b9;
+  color: #ecf0f1;
+
+  &:hover {
+    background-color: darken(#2980b9, 10);
+  }
+}
+
+.btn-secondary {
+  background-color: #16a085;
+  color: #ecf0f1;
+
+  &:hover {
+    background-color: darken(#16a085, 10);
+  }
+}
+
+// Texts
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 1rem;
+}
+
+.text-md {
+  font-size: 2rem;
+}
+
+.text-lg {
+  font-size: 3rem;
+}
+
+.text-xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}

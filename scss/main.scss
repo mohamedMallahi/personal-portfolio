@@ -1,3 +1,4 @@
+@import 'configs';
 @import 'utilities';
 
 // Global
@@ -5,11 +6,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // letter-spacing: 0.7px;
+  letter-spacing: 0.7px;
 }
 
 body {
-  // background-color: $light-color;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 1.6;
@@ -25,22 +25,25 @@ body {
   height: calc(100vh - 2rem);
   margin: 1rem !important;
   // background: #2980b9;
-  background-image: linear-gradient(to bottom right, #2980b9, darken(#2980b9, 20));
+  background-image: linear-gradient(
+    to bottom right,
+    #2980b9,
+    darken(#2980b9, 20)
+  );
   color: #fff;
 
   &::before,
-	&::after {
-		content: '';
-		position: absolute;
-		transform: skewY(-3deg);
-		height: 100px;
-		bottom: -70px;
-		left: 0;
-		right: -1px;
-		background-color: #fff;
-	}
+  &::after {
+    content: '';
+    position: absolute;
+    transform: skewY(-2deg);
+    height: 100px;
+    bottom: -70px;
+    left: 0;
+    right: -1px;
+    background-color: #fff;
+  }
 }
-
 
 // About
 .about {
@@ -60,4 +63,60 @@ body {
     width: 100%;
     height: 100%;
   }
+}
+
+// Skills
+.skills {
+  background-color: $primary-color;
+  padding: 2rem 0;
+
+  .flex {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    text-align: center;
+    color: #fff;
+    padding: 0;
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+
+// Portfolio
+.portfolio {
+  padding-top: 2rem;
+
+  .flex {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .project {
+    background-color: #3498db;
+    
+    &-header {
+      background-color: #2980b9;
+      padding: 1rem;
+    }
+    
+    &-body {
+      padding: 1rem;
+
+      ul {
+        list-style: none
+      }
+
+      li::before {
+        content: '>';
+        padding-right: 1rem;
+      }
+    }
+  }
+
 }

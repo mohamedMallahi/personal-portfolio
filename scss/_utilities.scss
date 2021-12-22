@@ -3,6 +3,7 @@
   max-width: 980px;
   margin: 0 auto;
   overflow: hidden;
+  padding: 2rem 0;
   // border: 1px solid #000;
 }
 
@@ -91,4 +92,8 @@
 
 .text-center {
   text-align: center;
+}
+
+.text-light {
+  color: #ecf0f1;
 }
